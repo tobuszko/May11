@@ -12,7 +12,7 @@ public class AliceMain {
 
 
         try {
-            List<String> book = Files.readAllLines(Paths.get("alice30.txt"));
+            List<String> book = Files.readAllLines(Paths.get("pl/wszib/edu/Collections/Zadanie5_5_Alicja/alice30.txt"));
             System.out.println("Ilość wiereszy w książce: " + BookReader.numberOfLines(book));
         } catch (IOException e) {
             e.printStackTrace();
