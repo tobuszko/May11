@@ -1,8 +1,11 @@
 package pl.wszib.edu.Generic;
 
+import pl.wszib.edu.Collections.A;
 import pl.wszib.edu.Collections.Zadanie5_3.ListOperations;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class GenericTest {
@@ -21,6 +24,36 @@ public class GenericTest {
 
 boolean same = Util.compare(p1,p2);
         System.out.println(same);
+
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("dwa");
+        list.add("siedem");
+
+        printList(list);
+
+
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+
+        printList(list1);
+
+
+        List<A> list2 = new LinkedList<>();
+        list2.add(new A(1, "jeden"));
+        list2.add(new A(2, "dwa"));
+        list2.add(new A(3, "trzy"));
+
+        printList(list2);
+
+    }
+
+    public static void printList(List<?> list){
+        for (Object s : list){
+            System.out.println(s +  " " );
+        }
     }
 }
 
